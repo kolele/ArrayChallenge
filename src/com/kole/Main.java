@@ -1,15 +1,21 @@
 package com.kole;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
 
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int[] returnedArray = getIntegers(5);
         printIntegers(returnedArray);
-        System.out.println(calcAverage(returnedArray));
+        //System.out.println(calcAverage(returnedArray));
+        System.out.println("***************");
+        Arrays.sort(returnedArray);
+
+        printIntegers(returnedArray);
     }
 
     public static int[] getIntegers (int number){
@@ -33,5 +39,6 @@ public class Main {
             sum += array[i];
         } return (double) sum / (double) array.length;
     }
+
 
 }
